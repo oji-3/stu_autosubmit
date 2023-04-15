@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>息をする心スペイベ自動申込み</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $('#service_2').click(function() {
+	        $('#dropdown_1').show();
+	    });
+        $('#service_3').click(function() {
+	        $('#dropdown_2').show();
+	    });
+	    $('#service_4').click(function() {
+	        $('#dropdown_3').show();
+	    });
+        $('#service_5').click(function() {
+	        $('#dropdown_4').show();
+	    });
+	    $('input[name="service"]').click(function(){
+	        if($(this).attr('id') != 'service_2'){
+	            $('#dropdown_1').hide();
+	        }
+            if($(this).attr('id') != 'service_3'){
+	            $('#dropdown_2').hide();
+	        }
+	        if($(this).attr('id') != 'service_4'){
+	            $('#dropdown_3').hide();
+	        }
+            if($(this).attr('id') != 'service_5'){
+	            $('#dropdown_4').hide();
+	        }
+	    });
+	});
+	</script>
+</head>
+<body>
+	<h1>息をする心スペイベ自動申込み</h1>
+
+	<form method="POST" action="/submit">
+		<label>●シリアルコードを入力してください (1行につき1シリアルコードを入力してください)</label>
+		<br>
+		<textarea 
+        name="serialCodes" 
+        rows="10"
+        placeholder=
+"1a2b3c4d
+aa11bb22
+"></textarea>
+		<br><br>
+
+        <label>●ご希望のコースをお選びください</label>
+        <br>
+        <input type="radio" id="service_2" name="service" value="2" >
+        <label for="service_2">２．STU48祭＠福山ビッグ・ローズ</label>
+        <br>
+        <input type="radio" id="service_3" name="service" value="3" >
+        <label for="service_3">３．チーム対抗！ボーリング大会！</label>
+        <br>
+        <input type="radio" id="service_4" name="service" value="4" >
+        <label for="service_4">４．STU48 瀬戸内PR部隊 Season2メンバーと作る広島風お好み焼き体験</label>
+        <br>
+        <input type="radio" id="service_5" name="service" value="5" >
+        <label for="service_5">５．直筆サイン入り「息をする心」告知ポスター プレゼント</label>
+        <br><br>
+
+        <div id="dropdown_1" style="display:none">
+            <br><label>２．ご希望の内容をお選びください</label><br>
+            <select name="e_9487" id="e_9487">
+                <option value="1">・STU48 瀬戸内PR部隊 Season2投票企画 1位記念　石田千穂ソロライブ</option>
+                <option value="2">・STU48全員参加のスペシャルミニライブ</option>
+            </select>
+        </div>
+        <div id="dropdown_2" style="display:none">
+            <br><label>３．ご希望のメンバーをお選びください</label><br>
+            <select name="e_9751" id="e_9751">
+                <option value="1">石田千穂</option>
+                <option value="2">石田みなみ</option>
+                <option value="3">今村美月</option>
+                <option value="4">岩田陽菜</option>
+                <option value="5">甲斐心愛</option>
+                <option value="6">瀧野由美子</option>
+                <option value="7">谷口茉妃菜</option>
+                <option value="8">兵頭葵</option>
+                <option value="9">福田朱里</option>
+                <option value="10">峯吉愛梨沙</option>
+                <option value="11">森下舞羽</option>
+                <option value="12">沖侑果</option>
+                <option value="13">信濃宙花</option>
+                <option value="14">中村舞</option>
+                <option value="15">池田裕楽</option>
+                <option value="16">内海里音</option>
+                <option value="17">尾崎世里花</option>
+                <option value="18">川又あん奈</option>
+                <option value="19">川又優菜</option>
+                <option value="20">工藤理子</option>
+                <option value="21">小島愛子</option>
+                <option value="22">迫姫華</option>
+                <option value="23">清水紗良</option>
+                <option value="24">鈴木彩夏</option>
+                <option value="25">高雄さやか</option>
+                <option value="26">原田清花</option>
+                <option value="27">宗雪里香</option>
+                <option value="28">吉田彩良</option>
+                <option value="29">立仙百佳</option>
+                <option value="30">渡辺菜月</option>
+                <option value="31">岡田あずみ</option>
+                <option value="32">岡村梨央</option>
+                <option value="33">久留島優果</option>
+                <option value="34">諸葛望愛</option>
+            </select>
+        </div>
+        <div id="dropdown_3" style="display:none">
+            <br><label>４．ご希望の部をお選びください</label><br>
+            <select name="e_9753" id="e_9753">
+                <option value="1">一部：沖侑果・尾崎世里花・高雄さやか</option>
+                <option value="2">二部：石田千穂・中村舞・福田朱里</option>
+            </select>
+        </div>
+        <div id="dropdown_4" style="display:none">
+            <br><label>５．ご希望のメンバーをお選びください</label><br>
+            <select name="e_9755" id="e_9755">
+                <option value="1">石田千穂</option>
+                <option value="2">石田みなみ</option>
+                <option value="3">今村美月</option>
+                <option value="4">岩田陽菜</option>
+                <option value="5">甲斐心愛</option>
+                <option value="6">瀧野由美子</option>
+                <option value="7">谷口茉妃菜</option>
+                <option value="8">兵頭葵</option>
+                <option value="9">福田朱里</option>
+                <option value="10">峯吉愛梨沙</option>
+                <option value="11">森下舞羽</option>
+                <option value="12">沖侑果</option>
+                <option value="13">信濃宙花</option>
+                <option value="14">中村舞</option>
+                <option value="15">池田裕楽</option>
+                <option value="16">内海里音</option>
+                <option value="17">尾崎世里花</option>
+                <option value="18">川又あん奈</option>
+                <option value="19">川又優菜</option>
+                <option value="20">工藤理子</option>
+                <option value="21">小島愛子</option>
+                <option value="22">迫姫華</option>
+                <option value="23">清水紗良</option>
+                <option value="24">鈴木彩夏</option>
+                <option value="25">高雄さやか</option>
+                <option value="26">原田清花</option>
+                <option value="27">宗雪里香</option>
+                <option value="28">吉田彩良</option>
+                <option value="29">立仙百佳</option>
+                <option value="30">渡辺菜月</option>
+                <option value="31">岡田あずみ</option>
+                <option value="32">岡村梨央</option>
+                <option value="33">久留島優果</option>
+                <option value="34">諸葛望愛</option>
+            </select>
+        </div>
+        
+        <br>
+		<label>●メールアドレス</label>
+		<br>
+		<input type="text" name="email">
+		<br><br>
+		<label>●氏名</label>
+		<br>
+		<input type="text" name="name" placeholder="瀬戸内太郎">
+		<br><br>
+		<label>●フリガナ</label>
+		<br>
+		<input type="text" name="furigana" placeholder="セトウチタロウ">
+		<br><br>
+		<label>●年齢</label>
+		<br>
+		<input type="text" name="age">
+		<br><br>
+		<label>●性別</label>
+		<br>
+		<input type="radio" id="gender1" name="gender" value="1">
+		<label for="gender1">男性</label>
+		<br>
+		<input type="radio" id="gender2" name="gender" value="2">
+		<label for="gender2">女性</label>
+		<br><br>
+        <label>●郵便番号</label><br>
+        <input type="text" name="postal_code1" size="3" maxlength="3"> -
+        <input type="text" name="postal_code2" size="4" maxlength="4"><br><br>
+  
+        <label>●住所</label><br>
+        <input type="text" name="address" placeholder="東京都千代田区丸の内１丁目"><br><br>
+  
+        <label>●電話番号</label><br>
+        <input type="text" name="tel1" size="5" maxlength="5"> -
+        <input type="text" name="tel2" size="4" maxlength="4"> -
+        <input type="text" name="tel3" size="4" maxlength="4"><br><br>
+		<input type="submit" value="送信">
+	</form>
+</body>
+</html>
